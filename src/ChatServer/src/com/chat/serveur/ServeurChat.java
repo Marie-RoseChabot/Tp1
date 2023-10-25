@@ -96,4 +96,16 @@ public class ServeurChat extends Serveur {
         String s = "";
         return s;
     }
+
+    /**
+     * Envoie un message à tous les utilisateurs connectés sauf à celui qui l'écrit.
+     *
+     *
+     */
+    public void envoyerATousSauf(String str, String aliasExpediteur,Connexion cnx) {
+
+        cnx.envoyer(aliasExpediteur + ">>" + str);
+
+    }
 }
+

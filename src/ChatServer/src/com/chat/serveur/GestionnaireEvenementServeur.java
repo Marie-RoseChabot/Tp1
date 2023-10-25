@@ -39,8 +39,10 @@ public class GestionnaireEvenementServeur implements GestionnaireEvenement {
         if (source instanceof Connexion) {
             cnx = (Connexion) source;
             System.out.println("SERVEUR-Recu : " + evenement.getType() + " " + evenement.getArgument());
-            typeEvenement = evenement.getType();
+            typeEvenement = evenement.getType().toUpperCase();
+
             switch (typeEvenement) {
+
                 case "EXIT": //Ferme la connexion avec le client qui a envoyé "EXIT":
                     cnx.envoyer("END");
                     serveur.enlever(cnx);
@@ -50,9 +52,14 @@ public class GestionnaireEvenementServeur implements GestionnaireEvenement {
                     cnx.envoyer("LIST " + serveur.list());
                     break;
 
-                //Ajoutez ici d’autres case pour gérer d’autres commandes.
+                case "MSG":
 
-                default: //Renvoyer le texte recu convertit en majuscules :
+                    msg= (evenement.getArgument());
+                   serveur.envoyerATousSauf(msg,((Connexion) source).getAlias(), cnx);
+                //Ajoutez ici d’autres case pour gérer d’autres commandes.
+                    break;
+
+                default: //Renvoyer le texte recu convertit en majuscules
                     msg = (evenement.getType() + " " + evenement.getArgument()).toUpperCase();
                     cnx.envoyer(msg);
             }
