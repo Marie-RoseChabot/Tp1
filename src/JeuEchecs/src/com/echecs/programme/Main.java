@@ -1,6 +1,6 @@
 package JeuEchecs.src.com.echecs.programme;
 
-import com.echecs.util.EchecsUtil;
+import JeuEchecs.src.com.echecs.util.EchecsUtil;
 /**
  * Programme pour tester les classes de jeu d'échecs.
  *

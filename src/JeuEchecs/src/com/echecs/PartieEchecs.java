@@ -1,7 +1,7 @@
 package JeuEchecs.src.com.echecs;
 
-import com.echecs.pieces.Piece;
-import com.echecs.util.EchecsUtil;
+import JeuEchecs.src.com.echecs.pieces.Piece;
+import JeuEchecs.src.com.echecs.util.EchecsUtil;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 /**

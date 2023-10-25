@@ -1,4 +1,4 @@
-package com.chat.commun.evenement;
+package ChatServer.src.com.chat.commun.evenement;
 
 /**
  * Cette classe représente un événement. Un événement est caractérisé par sa

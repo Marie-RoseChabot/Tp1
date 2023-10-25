@@ -1,4 +1,4 @@
-package com.chat.serveur;
+package ChatServer.src.com.chat.serveur;
 
 /**
  * Informations sur un serveur, utilisées par défaut.

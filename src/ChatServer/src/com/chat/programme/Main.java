@@ -1,8 +1,8 @@
-package com.chat.programme;
+package ChatServer.src.com.chat.programme;
 
-import com.chat.serveur.Config;
-import com.chat.serveur.ServeurChat;
-import com.chat.serveur.Serveur;
+import ChatServer.src.com.chat.serveur.Config;
+import ChatServer.src.com.chat.serveur.ServeurChat;
+import ChatServer.src.com.chat.serveur.Serveur;
 
 import java.util.Scanner;
 

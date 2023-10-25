@@ -1,6 +1,6 @@
-package com.chat.serveur;
+package ChatServer.src.com.chat.serveur;
 
-import com.chat.serveur.Serveur;
+import ChatServer.src.com.chat.serveur.Serveur;
 
 /**
  * Cette classe permet de créer des threads capables d'écouter continuellement sur un objet de type Serveur

@@ -1,4 +1,4 @@
-package com.chat.commun.evenement;
+package ChatServer.src.com.chat.commun.evenement;
 
 /**
  * Classe utilitaire fournissant des méthodes pour manipuler des événements.

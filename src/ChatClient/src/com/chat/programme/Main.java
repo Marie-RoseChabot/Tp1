@@ -1,7 +1,7 @@
 package ChatClient.src.com.chat.programme;
 
-import com.chat.client.Client;
-import com.chat.client.ClientChat;
+import ChatClient.src.com.chat.client.Client;
+import ChatClient.src.com.chat.client.ClientChat;
 
 import java.util.Scanner;
 

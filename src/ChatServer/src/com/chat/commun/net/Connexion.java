@@ -1,4 +1,4 @@
-package com.chat.commun.net;
+package ChatServer.src.com.chat.commun.net;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;

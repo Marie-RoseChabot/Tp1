@@ -1,6 +1,6 @@
-package com.chat.serveur;
+package ChatServer.src.com.chat.serveur;
 
-import com.chat.commun.net.Connexion;
+import ChatServer.src.com.chat.commun.net.Connexion;
 
 import java.util.ArrayList;
 

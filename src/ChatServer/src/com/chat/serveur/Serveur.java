@@ -1,11 +1,11 @@
-package com.chat.serveur;
+package ChatServer.src.com.chat.serveur;
 
-import com.chat.commun.evenement.Evenement;
-import com.chat.commun.evenement.EvenementUtil;
-import com.chat.commun.evenement.GestionnaireEvenement;
-import com.chat.commun.net.Connexion;
-import com.chat.commun.thread.Lecteur;
-import com.chat.commun.thread.ThreadEcouteurDeTexte;
+import ChatServer.src.com.chat.commun.evenement.Evenement;
+import ChatServer.src.com.chat.commun.evenement.EvenementUtil;
+import ChatServer.src.com.chat.commun.evenement.GestionnaireEvenement;
+import ChatServer.src.com.chat.commun.net.Connexion;
+import ChatServer.src.com.chat.commun.thread.Lecteur;
+import ChatServer.src.com.chat.commun.thread.ThreadEcouteurDeTexte;
 
 import java.io.IOException;
 import java.net.ServerSocket;

@@ -1,8 +1,8 @@
-package com.chat.serveur;
+package ChatServer.src.com.chat.serveur;
 
-import com.chat.commun.evenement.Evenement;
-import com.chat.commun.evenement.GestionnaireEvenement;
-import com.chat.commun.net.Connexion;
+import ChatServer.src.com.chat.commun.evenement.Evenement;
+import ChatServer.src.com.chat.commun.evenement.GestionnaireEvenement;
+import ChatServer.src.com.chat.commun.net.Connexion;
 
 /**
  * Cette classe représente un gestionnaire d'événement d'un serveur. Lorsqu'un serveur reçoit un texte d'un client,

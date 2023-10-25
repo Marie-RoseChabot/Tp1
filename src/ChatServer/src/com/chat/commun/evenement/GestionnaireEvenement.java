@@ -1,4 +1,4 @@
-package com.chat.commun.evenement;
+package ChatServer.src.com.chat.commun.evenement;
 
 /**
  * Cette interface représente un gestionnaire d'événement.
