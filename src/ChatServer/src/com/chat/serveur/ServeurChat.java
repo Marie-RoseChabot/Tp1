@@ -2,7 +2,7 @@ package ChatServer.src.com.chat.serveur;
 
 import ChatServer.src.com.chat.commun.net.Connexion;
 
-import java.util.ArrayList;
+import java.util.Vector;
 
 /**
  * Cette classe étend (hérite) la classe abstraite Serveur et y ajoute le nécessaire pour que le
@@ -102,9 +102,13 @@ public class ServeurChat extends Serveur {
      *
      *
      */
-    public void envoyerATousSauf(String str, String aliasExpediteur,Connexion cnx) {
+    public void envoyerATousSauf(String str, String aliasExpediteur, Vector<Connexion> cnx) {
 
-        cnx.envoyer(aliasExpediteur + ">>" + str);
+for(int i=0;i<cnx.capacity();i++) {
+    if(!aliasExpediteur.equals(cnx.get(i).getAlias())) {
+        cnx.get(i).envoyer(aliasExpediteur + ">>" + str);
+    }
+}
 
     }
 }

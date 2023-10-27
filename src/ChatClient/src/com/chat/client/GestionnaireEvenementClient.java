@@ -50,11 +50,9 @@ public class GestionnaireEvenementClient implements GestionnaireEvenement {
                         System.out.println("\t\t\t- "+s);
                     break;
                 case "MSG":
-                    if(!(cnx.getAlias().equals(((Connexion) source).getAlias()))){
-
-                        System.out.println("\t\t\t." + evenement.getType() + " " + evenement.getArgument());
-                    }
+                    System.out.println("\t\t\t."+evenement.getType()+" "+evenement.getArgument());
                     break;
+
                 default: //Afficher le texte recu :
                     System.out.println("\t\t\t."+evenement.getType()+" "+evenement.getArgument());
             }
