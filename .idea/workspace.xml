@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ChatClient/src/com/chat/client/GestionnaireEvenementClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatClient/src/com/chat/client/GestionnaireEvenementClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/GestionnaireEvenementServeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/GestionnaireEvenementServeur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/Serveur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/Serveur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/ServeurChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/ServeurChat.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Question1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,46 +57,7 @@
       <recent name="C:\Users\Dell\IdeaProjects\TP1\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (17)">
-    <configuration name="Main (10)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
-      <module name="TP1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (11)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
-      <module name="TP1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (12)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
-      <module name="TP1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Main (13)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
       <module name="TP1" />
@@ -161,123 +123,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
-      <module name="TP1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (3)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
-      <module name="TP1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (4)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
-      <module name="TP1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (5)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
-      <module name="TP1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (6)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
-      <module name="TP1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (7)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
-      <module name="TP1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (8)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
-      <module name="TP1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (9)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
-      <module name="TP1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
-      <module name="TP1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
       <module name="TP1" />
@@ -312,7 +157,9 @@
       <workItem from="1697934103406" duration="886000" />
       <workItem from="1697996774412" duration="157000" />
       <workItem from="1698240366806" duration="7543000" />
-      <workItem from="1698247994482" duration="5708000" />
+      <workItem from="1698247994482" duration="19966000" />
+      <workItem from="1698866130359" duration="320000" />
+      <workItem from="1698866471884" duration="424000" />
     </task>
     <task id="LOCAL-00001" summary="Package refactoring">
       <option name="closed" value="true" />
@@ -352,6 +199,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Package refactoring" />
     <MESSAGE value="Question 1" />
@@ -360,11 +218,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ChatServer/src/com/chat/commun/thread/ThreadEcouteurDeTexte.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

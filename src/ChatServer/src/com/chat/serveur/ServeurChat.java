@@ -2,6 +2,8 @@ package ChatServer.src.com.chat.serveur;
 
 import ChatServer.src.com.chat.commun.net.Connexion;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
 
 /**
@@ -13,6 +15,9 @@ import java.util.Vector;
  * @since 2023-09-15
  */
 public class ServeurChat extends Serveur {
+
+    //attribut pour stocker tous les messages envoyes au salon de chat public
+    public Vector<String> historique=new Vector<>();
 
     /**
      * Crée un serveur de chat qui va écouter sur le port spécifié.
@@ -26,6 +31,7 @@ public class ServeurChat extends Serveur {
     @Override
     public synchronized boolean ajouter(Connexion connexion) {
         String hist = this.historique();
+
         if ("".equals(hist)) {
             connexion.envoyer("OK");
         }
@@ -93,9 +99,22 @@ public class ServeurChat extends Serveur {
      * forme message1\nmessage2\nmessage3 ...
      */
     public String historique() {
-        String s = "";
+        String s="";
+
+         if(historique != null){
+            for (int i=0;i< historique.size();i++) {
+
+                if (i != 0) {
+                    s = (s + "\n" + "\t\t\t." + historique.get(i));
+                }
+                else
+                    s=(s  + historique.get(i));
+            }
+        }
+
         return s;
     }
+
 
     /**
      * Envoie un message à tous les utilisateurs connectés sauf à celui qui l'écrit.
@@ -103,13 +122,20 @@ public class ServeurChat extends Serveur {
      *
      */
     public void envoyerATousSauf(String str, String aliasExpediteur, Vector<Connexion> cnx) {
+        ajouterHistorique(aliasExpediteur + ">>" + str);
 
-for(int i=0;i<cnx.capacity();i++) {
-    if(!aliasExpediteur.equals(cnx.get(i).getAlias())) {
-        cnx.get(i).envoyer(aliasExpediteur + ">>" + str);
+        for (int i = 0; i < cnx.size(); i++) {
+            if (!aliasExpediteur.equals(cnx.get(i).getAlias())) {
+                cnx.get(i).envoyer(aliasExpediteur + ">>" + str);
+
+            }
+
+        }
+
+    }
+
+    public void ajouterHistorique(String message){
+        historique.addElement(message);
+
     }
 }
-
-    }
-}
-

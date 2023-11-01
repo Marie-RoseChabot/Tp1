@@ -4,6 +4,8 @@ import ChatClient.src.com.chat.commun.evenement.Evenement;
 import ChatClient.src.com.chat.commun.evenement.GestionnaireEvenement;
 import ChatClient.src.com.chat.commun.net.Connexion;
 
+import java.util.ArrayList;
+
 /**
  * Cette classe représente un gestionnaire d'événement d'un client. Lorsqu'un client reçoit un texte d'un serveur,
  * il crée un événement à partir du texte reçu et alerte ce gestionnaire qui réagit en gérant l'événement.
@@ -33,7 +35,7 @@ public class GestionnaireEvenementClient implements GestionnaireEvenement {
         Object source = evenement.getSource();
         Connexion cnx;
         String typeEvenement, arg;
-        String[] membres;
+        String[] membres,msg;
 
         if (source instanceof Connexion) {
             cnx = (Connexion) source;
@@ -51,6 +53,10 @@ public class GestionnaireEvenementClient implements GestionnaireEvenement {
                     break;
                 case "MSG":
                     System.out.println("\t\t\t."+evenement.getType()+" "+evenement.getArgument());
+                    break;
+
+                case "HIST":
+                    System.out.println("\t\t\t."+evenement.getArgument());
                     break;
 
                 default: //Afficher le texte recu :

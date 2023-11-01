@@ -54,8 +54,7 @@ public class GestionnaireEvenementServeur implements GestionnaireEvenement {
 
                 case "MSG":
                     msg= (evenement.getArgument());
-                   serveur.envoyerATousSauf(msg,((Connexion) source).getAlias(),serveur.connectes);
-                //Ajoutez ici d’autres case pour gérer d’autres commandes.
+                    serveur.envoyerATousSauf(msg,((Connexion) source).getAlias(),serveur.connectes);
                     break;
 
                 default: //Renvoyer le texte recu convertit en majuscules
