@@ -1,5 +1,6 @@
 package JeuEchecs.src.com.echecs.programme;
 
+import JeuEchecs.src.com.echecs.Position;
 import JeuEchecs.src.com.echecs.util.EchecsUtil;
 /**
  * Programme pour tester les classes de jeu d'échecs.
@@ -20,5 +21,10 @@ public class Main {
         System.out.print("  ");
         for (byte j=0;j<8;j++)
             System.out.print(EchecsUtil.getColonne(j)+" ");
+
+        // A des fins de test!!!
+        Position a = new Position('d',(byte)1);
+        Position b = new Position('d',(byte)2);
+        System.out.println(a.estVoisineDe(b));
     }
 }

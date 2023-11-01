@@ -41,7 +41,8 @@ public class Position {
      * @return boolean true si les 2 positions sont voisines, false sinon.
      */
     public boolean estVoisineDe(Position p) {
-        throw new NotImplementedException();
+        return this.getLigne() - p.ligne < 2 && this.getLigne() - p.ligne > -2
+                && (int) this.getColonne() - (int) p.colonne < 2 && (int) this.getColonne() - (int) p.colonne > -2;
     }
     /**
      * Indique si 2 positions sont sur la même ligne sur un échiquier.
