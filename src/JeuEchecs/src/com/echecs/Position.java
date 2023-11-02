@@ -69,7 +69,6 @@ public class Position {
      * @return boolean true si les 2 positions sont sur la même diagonale, false sinon.
      */
     public boolean estSurLaMemeDiagonaleQue(Position p) {
-        //return (int) this.getColonne() + this.getLigne() - p.ligne == (int) p.colonne || (int) this.getColonne() - this.getLigne() - p.ligne == (int) p.colonne;
         return Math.abs(this.getLigne() - p.ligne) == Math.abs((int) this.getColonne() - (int) p.colonne);
     }
 }
