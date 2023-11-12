@@ -23,7 +23,7 @@ public class EchecsUtil {
      * @return Position position de la case
      */
     public static Position getPosition(byte i, byte j) {
-        byte  ligne = (byte)(8-i);
+        byte ligne = (byte)(8-i);
         char colonne = (char)('a'+j);
         return new Position(colonne,ligne);
     }

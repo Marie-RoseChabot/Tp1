@@ -49,7 +49,7 @@ public class PartieEchecs {
     /**
      * Tente de déplacer une pièce d'une position à une autre sur l'échiquier.
      * Le déplacement peut échouer pour plusieurs raisons, selon les règles du
-     * jeu d'échecs. Par exemples :
+     * jeu d'échecs. Par exemple :
      *  Une des positions n'existe pas;
      *  Il n'y a pas de pièce à la position initiale;
      *  La pièce de la position initiale ne peut pas faire le mouvement;
@@ -61,7 +61,15 @@ public class PartieEchecs {
      * @return boolean true, si le déplacement a été effectué avec succès, false sinon
      */
     public boolean deplace(Position initiale, Position finale) {
-         throw new NotImplementedException();
+        // la position initiale n'existe pas
+        if((int)initiale.getColonne() < 1 || initiale.getLigne() < 1 || (int)initiale.getColonne() > 8 || initiale.getLigne() > 8) {
+            return false;
+        }
+        // la position finale n'existe pas
+        if((int)finale.getColonne() < 1 || finale.getLigne() < 1 || (int)finale.getColonne() > 8 || finale.getLigne() > 8) {
+            return false;
+        }
+        return true;
     }
 
     /**
