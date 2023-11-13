@@ -2,6 +2,7 @@ package JeuEchecs.src.com.echecs;
 
 import JeuEchecs.src.com.echecs.pieces.Piece;
 import JeuEchecs.src.com.echecs.pieces.Pion;
+import JeuEchecs.src.com.echecs.pieces.Tour;
 import JeuEchecs.src.com.echecs.util.EchecsUtil;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
@@ -36,8 +37,10 @@ public class PartieEchecs {
         echiquier = new Piece[8][8];
         // S'ASSURER QUE LES BLANCS SOIENT TOUJOURS EN BAS
         //Placement des pièces :
+        echiquier[3][1] = new Tour('b');
+        echiquier[3][4] = new Pion('n');
+        echiquier[6][1] = new Pion('n');
         echiquier[1][1] = new Pion('b');
-        echiquier[2][2] = new Pion('n');
     }
 
     /**
@@ -65,12 +68,12 @@ public class PartieEchecs {
      */
     public boolean deplace(Position initiale, Position finale) {
         // la position initiale n'existe pas
-        if(EchecsUtil.indiceColonne(initiale.getColonne()) < 1 || initiale.getLigne() < 1 || EchecsUtil.indiceColonne(initiale.getColonne()) > 7 || initiale.getLigne() > 7) {
+        if(EchecsUtil.indiceColonne(initiale.getColonne()) < 0 || initiale.getLigne() < 0 || EchecsUtil.indiceColonne(initiale.getColonne()) > 7 || initiale.getLigne() > 7) {
             System.out.println("Position initiale n'existe pas");
             return false;
         }
         // la position finale n'existe pas
-        if(EchecsUtil.indiceColonne(finale.getColonne()) < 1 || finale.getLigne() < 1 || EchecsUtil.indiceColonne(finale.getColonne()) > 7 || finale.getLigne() > 7) {
+        if(EchecsUtil.indiceColonne(finale.getColonne()) < 0 || finale.getLigne() < 0 || EchecsUtil.indiceColonne(finale.getColonne()) > 7 || finale.getLigne() > 7) {
             System.out.println("Position finale n'existe pas");
             return false;
         }
