@@ -65,15 +65,37 @@ public class PartieEchecs {
      */
     public boolean deplace(Position initiale, Position finale) {
         // la position initiale n'existe pas
-        //if((int)initiale.getColonne() < 1 || initiale.getLigne() < 1 || (int)initiale.getColonne() > 7 || initiale.getLigne() > 7) {
-          //  return false;
-        //}
+        if(EchecsUtil.indiceColonne(initiale.getColonne()) < 1 || initiale.getLigne() < 1 || EchecsUtil.indiceColonne(initiale.getColonne()) > 7 || initiale.getLigne() > 7) {
+            System.out.println("Position initiale n'existe pas");
+            return false;
+        }
         // la position finale n'existe pas
-      //  if((int)finale.getColonne() < 1 || finale.getLigne() < 1 || (int)finale.getColonne() > 7 || finale.getLigne() > 7) {
-    //        return false;
-  //      }
+        if(EchecsUtil.indiceColonne(finale.getColonne()) < 1 || finale.getLigne() < 1 || EchecsUtil.indiceColonne(finale.getColonne()) > 7 || finale.getLigne() > 7) {
+            System.out.println("Position finale n'existe pas");
+            return false;
+        }
+        // la position initiale n'a pas de piece associee
+        try{
+            echiquier[EchecsUtil.indiceColonne(initiale.getColonne())][initiale.getLigne()].getClass();
+        } catch (Exception e){
+            System.out.println("La position initiale n'a pas de piece associee.");
+            return false;
+        }
+        // Ce n'est pas une piece valide a bouger
+        if(this.getTour() != echiquier[EchecsUtil.indiceColonne(initiale.getColonne())][initiale.getLigne()].getCouleur()){
+            System.out.println("Cette piece n'est pas la votre ou ce n'est pas votre tour.");
+            return false;
+        }
+        // voir si la position finale est associee a une piece. Le joueur tente de manger une piece qui l'appartient
+        try {
+            echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()].getClass();
+            if(echiquier[EchecsUtil.indiceColonne(initiale.getColonne())][initiale.getLigne()].getCouleur() == echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()].getCouleur()){
+                System.out.println("La destination est occupee par une piece qui vous appartient.");
+                return false;
+            }
+        } catch (Exception e){}
 
-        // When all checks are done, call peut se deplacer
+        // When all checks are done, call peutSeDeplacer
         return echiquier[EchecsUtil.indiceColonne(initiale.getColonne())][initiale.getLigne()].peutSeDeplacer(initiale, finale, echiquier);
     }
 
