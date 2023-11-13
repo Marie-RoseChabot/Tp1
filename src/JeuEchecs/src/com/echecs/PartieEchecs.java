@@ -1,6 +1,7 @@
 package JeuEchecs.src.com.echecs;
 
 import JeuEchecs.src.com.echecs.pieces.Piece;
+import JeuEchecs.src.com.echecs.pieces.Pion;
 import JeuEchecs.src.com.echecs.util.EchecsUtil;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
@@ -35,7 +36,7 @@ public class PartieEchecs {
         echiquier = new Piece[8][8];
         // S'ASSURER QUE LES BLANCS SOIENT TOUJOURS EN BAS
         //Placement des pièces :
-
+        echiquier[1][1] = new Pion('b');
     }
 
     /**
@@ -63,13 +64,18 @@ public class PartieEchecs {
      */
     public boolean deplace(Position initiale, Position finale) {
         // la position initiale n'existe pas
-        if((int)initiale.getColonne() < 1 || initiale.getLigne() < 1 || (int)initiale.getColonne() > 7 || initiale.getLigne() > 7) {
-            return false;
-        }
+        //if((int)initiale.getColonne() < 1 || initiale.getLigne() < 1 || (int)initiale.getColonne() > 7 || initiale.getLigne() > 7) {
+          //  return false;
+        //}
         // la position finale n'existe pas
-        if((int)finale.getColonne() < 1 || finale.getLigne() < 1 || (int)finale.getColonne() > 7 || finale.getLigne() > 7) {
-            return false;
-        }
+      //  if((int)finale.getColonne() < 1 || finale.getLigne() < 1 || (int)finale.getColonne() > 7 || finale.getLigne() > 7) {
+    //        return false;
+  //      }
+
+        // When all checks are done, call peut se deplacer
+        System.out.println(echiquier[1][1].getClass());
+        //Pion.peutSeDeplacer(echiquier[1][2].getPosition());
+
         return true;
     }
 
