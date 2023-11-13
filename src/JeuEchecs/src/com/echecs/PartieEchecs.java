@@ -33,6 +33,7 @@ public class PartieEchecs {
      */
     public PartieEchecs() {
         echiquier = new Piece[8][8];
+        // S'ASSURER QUE LES BLANCS SOIENT TOUJOURS EN BAS
         //Placement des pièces :
 
     }
