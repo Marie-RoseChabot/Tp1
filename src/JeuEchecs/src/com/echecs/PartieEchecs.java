@@ -37,6 +37,7 @@ public class PartieEchecs {
         // S'ASSURER QUE LES BLANCS SOIENT TOUJOURS EN BAS
         //Placement des pièces :
         echiquier[1][1] = new Pion('b');
+        echiquier[2][2] = new Pion('n');
     }
 
     /**
@@ -73,10 +74,7 @@ public class PartieEchecs {
   //      }
 
         // When all checks are done, call peut se deplacer
-        System.out.println(echiquier[1][1].getClass());
-        //Pion.peutSeDeplacer(echiquier[1][2].getPosition());
-
-        return true;
+        return echiquier[EchecsUtil.indiceColonne(initiale.getColonne())][initiale.getLigne()].peutSeDeplacer(initiale, finale, echiquier);
     }
 
     /**

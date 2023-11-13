@@ -26,16 +26,11 @@ public class Main {
             System.out.print(EchecsUtil.getColonne(j)+" ");
 
         // A des fins de test!!!
-
-        //Position a = new Position('g',(byte)1);
-        //Position b = new Position('e',(byte)3);
-        //System.out.println(a.estVoisineDe(b));
-        //System.out.println(a.estSurLaMemeDiagonaleQue(b));
         PartieEchecs partie = new PartieEchecs();
 
-        Position ini = new Position('b',(byte)1);
-        Position fin = new Position('b',(byte)2);
+        Position ini = new Position('c',(byte)2);
+        Position fin = new Position('b',(byte)1);
 
-        partie.deplace(ini, fin);
+        System.out.println(partie.deplace(ini, fin));
     }
 }
