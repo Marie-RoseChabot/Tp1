@@ -62,11 +62,11 @@ public class PartieEchecs {
      */
     public boolean deplace(Position initiale, Position finale) {
         // la position initiale n'existe pas
-        if((int)initiale.getColonne() < 1 || initiale.getLigne() < 1 || (int)initiale.getColonne() > 8 || initiale.getLigne() > 8) {
+        if((int)initiale.getColonne() < 1 || initiale.getLigne() < 1 || (int)initiale.getColonne() > 7 || initiale.getLigne() > 7) {
             return false;
         }
         // la position finale n'existe pas
-        if((int)finale.getColonne() < 1 || finale.getLigne() < 1 || (int)finale.getColonne() > 8 || finale.getLigne() > 8) {
+        if((int)finale.getColonne() < 1 || finale.getLigne() < 1 || (int)finale.getColonne() > 7 || finale.getLigne() > 7) {
             return false;
         }
         return true;

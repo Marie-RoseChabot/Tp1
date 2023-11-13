@@ -23,9 +23,9 @@ public class Main {
             System.out.print(EchecsUtil.getColonne(j)+" ");
 
         // A des fins de test!!!
-        Position a = new Position('g',(byte)1);
-        Position b = new Position('e',(byte)3);
-        System.out.println(a.estVoisineDe(b));
-        System.out.println(a.estSurLaMemeDiagonaleQue(b));
+        //Position a = new Position('g',(byte)1);
+        //Position b = new Position('e',(byte)3);
+        //System.out.println(a.estVoisineDe(b));
+        //System.out.println(a.estSurLaMemeDiagonaleQue(b));
     }
 }
