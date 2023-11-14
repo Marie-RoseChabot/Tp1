@@ -66,6 +66,7 @@ public class PartieEchecs {
 
         echiquier[4][7] = new Roi('b');
         echiquier[3][7] = new Tour('b');
+        echiquier[0][6] = new Pion('b');
         //echiquier[2][5] = new Fou('n');
         echiquier[4][0] = new Roi('n');
         echiquier[7][6] = new Tour('n');
@@ -143,6 +144,13 @@ public class PartieEchecs {
                 return false;
             }
 
+            // Check if a pawn got to the last line, if so create Dame
+            if(echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()] instanceof Pion && finale.getLigne() == 7 && echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()].getCouleur() == 'b'){
+                echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()] = new Dame('b');
+            } else if(echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()] instanceof Pion && finale.getLigne() == 0 && echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()].getCouleur() == 'n'){
+                echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()] = new Dame('n');
+            }
+
             return true;
         }
         return false;
@@ -184,6 +192,7 @@ public class PartieEchecs {
                 if(echiquier[c][l] == null){
                     continue;
                 }
+                // regarde si la couleur de la piece est differente de celle du roi
                 if(echiquier[c][l].getCouleur() == 'b' && echiquier[roiIndexes[0][0]][roiIndexes[0][1]].getCouleur() != 'b'){
                     Position fin = new Position(EchecsUtil.getColonne((byte)roiIndexes[0][0]),(byte)roiIndexes[0][1]);
                     if(echiquier[c][l].peutSeDeplacer(ini, fin, echiquier)){
