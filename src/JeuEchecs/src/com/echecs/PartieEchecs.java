@@ -33,7 +33,6 @@ public class PartieEchecs {
      */
     public PartieEchecs() {
         echiquier = new Piece[8][8];
-        // S'ASSURER QUE LES BLANCS SOIENT TOUJOURS EN BAS
         //Placement des pièces :
 
         // Pions
@@ -120,7 +119,25 @@ public class PartieEchecs {
         } catch (Exception e){}
 
         // When all checks are done, call peutSeDeplacer
-        return echiquier[EchecsUtil.indiceColonne(initiale.getColonne())][initiale.getLigne()].peutSeDeplacer(initiale, finale, echiquier);
+        if(echiquier[EchecsUtil.indiceColonne(initiale.getColonne())][initiale.getLigne()].peutSeDeplacer(initiale, finale, echiquier)){
+            // deplace la piece a la position finale
+            Piece temp = echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()];
+            char couleurTemp = echiquier[EchecsUtil.indiceColonne(initiale.getColonne())][initiale.getLigne()].getCouleur();
+            echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()] = echiquier[EchecsUtil.indiceColonne(initiale.getColonne())][initiale.getLigne()];
+            echiquier[EchecsUtil.indiceColonne(initiale.getColonne())][initiale.getLigne()] = null;
+
+            // determiner si le joueur est mis en echec ou reste en echec apres le deplacement
+            if(couleurTemp == estEnEchec()){
+                System.out.println("Ce deplacement est invalide, car vous etes en echec.");
+                // replace la piece a la position initiale
+                echiquier[EchecsUtil.indiceColonne(initiale.getColonne())][initiale.getLigne()] = echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()];
+                echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()] = temp;
+                return false;
+            }
+
+            return true;
+        }
+        return false;
     }
 
     /**
