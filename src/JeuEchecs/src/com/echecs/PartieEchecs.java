@@ -35,11 +35,33 @@ public class PartieEchecs {
         echiquier = new Piece[8][8];
         // S'ASSURER QUE LES BLANCS SOIENT TOUJOURS EN BAS
         //Placement des pièces :
-        //echiquier[2][2] = new Tour('b');
-        echiquier[4][4] = new Pion('n');
-        //echiquier[2][4] = new Pion('n');
-        echiquier[3][3] = new Cavalier('b');
-        //echiquier[3][3] = new Dame('b');
+
+        // Pions
+        for(int i = 0; i < 8; i ++){
+            echiquier[i][6] = new Pion('n');
+            echiquier[i][1] = new Pion('b');
+        }
+        // Tours
+        echiquier[0][0] = new Tour('b');
+        echiquier[7][0] = new Tour('b');
+        echiquier[0][7] = new Tour('n');
+        echiquier[7][7] = new Tour('n');
+        // Cavaliers
+        echiquier[1][0] = new Cavalier('b');
+        echiquier[6][0] = new Cavalier('b');
+        echiquier[1][7] = new Cavalier('n');
+        echiquier[6][7] = new Cavalier('n');
+        // Fous
+        echiquier[2][0] = new Fou('b');
+        echiquier[5][0] = new Fou('b');
+        echiquier[2][7] = new Fou('n');
+        echiquier[5][7] = new Fou('n');
+        // Dame
+        echiquier[3][0] = new Dame('b');
+        echiquier[3][7] = new Dame('n');
+        // Roi
+        echiquier[4][0] = new Roi('b');
+        echiquier[4][7] = new Roi('n');
     }
 
     /**
