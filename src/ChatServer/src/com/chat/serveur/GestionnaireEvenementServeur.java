@@ -33,7 +33,7 @@ public class GestionnaireEvenementServeur implements GestionnaireEvenement {
     public void traiter(Evenement evenement) {
         Object source = evenement.getSource();
         Connexion cnx;
-        String msg, typeEvenement, aliasExpediteur;
+        String msg, typeEvenement, aliasExpediteur,aliasReceveur;
         ServeurChat serveur = (ServeurChat) this.serveur;
 
         if (source instanceof Connexion) {
@@ -57,6 +57,37 @@ public class GestionnaireEvenementServeur implements GestionnaireEvenement {
                     serveur.envoyerATousSauf(msg,((Connexion) source).getAlias(),serveur.connectes);
                     break;
 
+                case "JOIN":
+                    aliasReceveur=(evenement.getArgument());
+                    aliasExpediteur=((Connexion) source).getAlias();
+                    serveur.gererInvitation(aliasReceveur,aliasExpediteur,serveur.connectes);
+                    break;
+
+                case "DECLINE":
+                    aliasReceveur=(evenement.getArgument());
+                    aliasExpediteur=((Connexion) source).getAlias();
+                    serveur.gererRefus(aliasExpediteur,aliasReceveur,serveur.connectes);
+                    break;
+
+                case "INV":
+
+                    aliasExpediteur=((Connexion) source).getAlias();
+
+                  cnx.envoyer("INV"+serveur.envoyerHistorique(aliasExpediteur));
+                    break;
+
+                case "QUIT":
+                    aliasReceveur=(evenement.getArgument());
+                    aliasExpediteur=((Connexion) source).getAlias();
+                    serveur.quitterChatPrive(aliasExpediteur,aliasReceveur,serveur.connectes);
+                    break;
+
+                case "PRV":
+                    msg= (evenement.getArgument());
+                    serveur.envoyerMessagePrive(((Connexion) source).getAlias(),msg,serveur.connectes);
+
+
+                    break;
                 default: //Renvoyer le texte recu convertit en majuscules
                     msg = (evenement.getType() + " " + evenement.getArgument()).toUpperCase();
                     cnx.envoyer(msg);
