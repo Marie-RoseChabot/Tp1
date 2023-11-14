@@ -14,7 +14,7 @@ public class Fou extends Piece{
             int c = 1;
             for(int l = pos2.getLigne() + 1; l < pos1.getLigne(); l ++){
                 if(echiquier[EchecsUtil.indiceColonne(pos2.getColonne()) + c][l] != null){
-                    System.out.println("Object trouve, ligne: " + l);
+                    System.out.println("Object trouve, ligne: " + l + " colonne: " + (EchecsUtil.indiceColonne(pos2.getColonne()) + c));
                     return false;
                 }
                 c ++;
@@ -26,7 +26,7 @@ public class Fou extends Piece{
             int c = 1;
             for(int l = pos2.getLigne() + 1; l < pos1.getLigne(); l ++){
                 if(echiquier[EchecsUtil.indiceColonne(pos2.getColonne()) - c][l] != null){
-                    System.out.println("Object trouve, ligne: " + l);
+                    System.out.println("Object trouve, ligne: " + l + " colonne: " + (EchecsUtil.indiceColonne(pos2.getColonne()) - c));
                     return false;
                 }
                 c ++;
@@ -37,8 +37,8 @@ public class Fou extends Piece{
         } else if(pos2.estSurLaMemeDiagonaleQue(pos1) && pos2.getLigne() - pos1.getLigne() > 0 && EchecsUtil.indiceColonne(pos2.getColonne()) - EchecsUtil.indiceColonne(pos1.getColonne()) < 0){
             int c = 1;
             for(int l = pos1.getLigne() + 1; l < pos2.getLigne(); l ++){
-                if(echiquier[EchecsUtil.indiceColonne(pos1.getColonne()) + c][l] != null){
-                    System.out.println("Object trouve, ligne: " + l);
+                if(echiquier[EchecsUtil.indiceColonne(pos1.getColonne()) - c][l] != null){
+                    System.out.println("Object trouve, ligne: " + l + " colonne: " + (EchecsUtil.indiceColonne(pos1.getColonne()) - c));
                     return false;
                 }
                 c ++;
@@ -49,8 +49,8 @@ public class Fou extends Piece{
         } else if(pos2.estSurLaMemeDiagonaleQue(pos1) && pos2.getLigne() - pos1.getLigne() > 0 && EchecsUtil.indiceColonne(pos2.getColonne()) - EchecsUtil.indiceColonne(pos1.getColonne()) > 0){
             int c = 1;
             for(int l = pos1.getLigne() + 1; l < pos2.getLigne(); l ++){
-                if(echiquier[EchecsUtil.indiceColonne(pos1.getColonne()) - c][l] != null){
-                    System.out.println("Object trouve, ligne: " + l);
+                if(echiquier[EchecsUtil.indiceColonne(pos1.getColonne()) + c][l] != null){
+                    System.out.println("Object trouve, ligne: " + l + " colonne: " + (EchecsUtil.indiceColonne(pos1.getColonne()) + c));
                     return false;
                 }
                 c ++;

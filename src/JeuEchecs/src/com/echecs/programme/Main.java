@@ -28,8 +28,8 @@ public class Main {
         // A des fins de test!!!
         PartieEchecs partie = new PartieEchecs();
 
-        Position ini = new Position('e',(byte)4);
-        Position fin = new Position('b',(byte)7);
+        Position ini = new Position('d',(byte)3);
+        Position fin = new Position('e',(byte)4);
 
         System.out.println(partie.deplace(ini, fin));
         // pour faire que la piece se deplace pour vrai, il faut changer la position de l'objet a la position finale.
