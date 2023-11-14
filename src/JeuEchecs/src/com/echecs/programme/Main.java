@@ -1,5 +1,9 @@
 package JeuEchecs.src.com.echecs.programme;
 
+import JeuEchecs.src.com.echecs.PartieEchecs;
+import JeuEchecs.src.com.echecs.Position;
+import JeuEchecs.src.com.echecs.pieces.Piece;
+import JeuEchecs.src.com.echecs.pieces.Pion;
 import JeuEchecs.src.com.echecs.util.EchecsUtil;
 /**
  * Programme pour tester les classes de jeu d'échecs.
@@ -20,5 +24,13 @@ public class Main {
         System.out.print("  ");
         for (byte j=0;j<8;j++)
             System.out.print(EchecsUtil.getColonne(j)+" ");
+
+        // A des fins de test!!!
+        PartieEchecs partie = new PartieEchecs();
+
+        Position ini = new Position('e',(byte)0);
+        Position fin = new Position('c',(byte)0);
+
+        System.out.println(partie.deplace(ini, fin));
     }
 }
