@@ -13,7 +13,6 @@ public class Tour extends Piece{
         if(pos2.estSurLaMemeColonneQue(pos1) && pos2.getLigne() - pos1.getLigne() < 0){
             for(int l = pos2.getLigne() + 1; l < pos1.getLigne(); l ++){
                 if(echiquier[EchecsUtil.indiceColonne(pos2.getColonne())][l] != null){
-                    System.out.println("Object trouve, ligne: " + l);
                     return false;
                 }
             }
@@ -23,7 +22,6 @@ public class Tour extends Piece{
         } else if(pos2.estSurLaMemeColonneQue(pos1) && pos2.getLigne() - pos1.getLigne() > 0){
             for(int l = pos1.getLigne() + 1; l < pos2.getLigne(); l ++){
                 if(echiquier[EchecsUtil.indiceColonne(pos2.getColonne())][l] != null){
-                    System.out.println("Object trouve, ligne: " + l);
                     return false;
                 }
             }
@@ -33,7 +31,6 @@ public class Tour extends Piece{
         } else if(pos2.estSurLaMemeLigneQue(pos1) && EchecsUtil.indiceColonne(pos2.getColonne()) - EchecsUtil.indiceColonne(pos1.getColonne()) < 0){
             for(int c = EchecsUtil.indiceColonne(pos2.getColonne()) + 1; c < EchecsUtil.indiceColonne(pos1.getColonne()); c ++){
                 if(echiquier[c][pos2.getLigne()] != null){
-                    System.out.println("Object trouve, colonne: " + c);
                     return false;
                 }
             }
@@ -43,7 +40,6 @@ public class Tour extends Piece{
         } else if(pos2.estSurLaMemeLigneQue(pos1) && EchecsUtil.indiceColonne(pos2.getColonne()) - EchecsUtil.indiceColonne(pos1.getColonne()) > 0){
             for(int c = EchecsUtil.indiceColonne(pos1.getColonne()) + 1; c < EchecsUtil.indiceColonne(pos2.getColonne()); c ++){
                 if(echiquier[c][pos2.getLigne()] != null){
-                    System.out.println("Object trouve, colonne: " + c);
                     return false;
                 }
             }
