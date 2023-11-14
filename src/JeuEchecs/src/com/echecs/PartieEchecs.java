@@ -1,5 +1,6 @@
 package JeuEchecs.src.com.echecs;
 
+import JeuEchecs.src.com.echecs.pieces.Fou;
 import JeuEchecs.src.com.echecs.pieces.Piece;
 import JeuEchecs.src.com.echecs.pieces.Pion;
 import JeuEchecs.src.com.echecs.pieces.Tour;
@@ -37,10 +38,10 @@ public class PartieEchecs {
         echiquier = new Piece[8][8];
         // S'ASSURER QUE LES BLANCS SOIENT TOUJOURS EN BAS
         //Placement des pièces :
-        echiquier[3][1] = new Tour('b');
-        echiquier[3][4] = new Pion('n');
-        echiquier[6][1] = new Pion('n');
-        echiquier[1][1] = new Pion('b');
+        echiquier[6][7] = new Tour('b');
+        echiquier[6][6] = new Pion('n');
+        echiquier[2][6] = new Pion('n');
+        echiquier[4][4] = new Fou('b');
     }
 
     /**
