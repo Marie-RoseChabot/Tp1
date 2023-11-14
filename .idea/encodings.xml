@@ -11,5 +11,6 @@
     <file url="file://$PROJECT_DIR$/src/ChatClient/src/com/chat/commun/thread/ThreadEcouteurDeTexte.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/ChatServer" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/ChatServer/src/com/chat/commun/evenement/GestionnaireEvenement.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/ServeurChat.java" charset="windows-1252" />
   </component>
 </project>

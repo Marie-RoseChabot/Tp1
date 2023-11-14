@@ -38,6 +38,8 @@ public class Serveur implements Lecteur {
     private ServerSocket serverSocket;
     //Indique si le serveur est déjà démarré ou non :
     private boolean demarre;
+
+
     //Écouteur qui gère les événements correspondant à l'arrivée de texte de clients :
     protected GestionnaireEvenement gestionnaireEvenementServeur;
 
