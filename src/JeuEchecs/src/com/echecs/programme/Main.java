@@ -28,12 +28,9 @@ public class Main {
         // A des fins de test!!!
         PartieEchecs partie = new PartieEchecs();
 
-        Position ini = new Position('a',(byte)6);
-        Position fin = new Position('a',(byte)7);
-        Position ini2 = new Position('a',(byte)7);
-        Position fin2 = new Position('a',(byte)0);
+        Position ini = new Position('e',(byte)0);
+        Position fin = new Position('c',(byte)0);
 
         System.out.println(partie.deplace(ini, fin));
-        System.out.println(partie.deplace(ini2, fin2));
     }
 }
