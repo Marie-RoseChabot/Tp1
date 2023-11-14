@@ -1,12 +1,14 @@
 package JeuEchecs.src.com.echecs.pieces;
 
 import JeuEchecs.src.com.echecs.Position;
+import JeuEchecs.src.com.echecs.util.EchecsUtil;
 
 public class Cavalier extends Piece{
-    Cavalier(char couleur) {
+    public Cavalier(char couleur) {
         super(couleur);
     }
     public boolean peutSeDeplacer(Position pos1, Position pos2, Piece[][] echiquier) {
-        return false;
+        return (Math.abs(pos2.getLigne() - pos1.getLigne()) == 2 && Math.abs(EchecsUtil.indiceColonne(pos2.getColonne()) - EchecsUtil.indiceColonne(pos1.getColonne())) == 1) ||
+                (Math.abs(pos2.getLigne() - pos1.getLigne()) == 1 && Math.abs(EchecsUtil.indiceColonne(pos2.getColonne()) - EchecsUtil.indiceColonne(pos1.getColonne())) == 2);
     }
 }

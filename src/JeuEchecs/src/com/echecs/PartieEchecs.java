@@ -38,7 +38,7 @@ public class PartieEchecs {
         //echiquier[2][2] = new Tour('b');
         echiquier[4][4] = new Pion('n');
         //echiquier[2][4] = new Pion('n');
-        echiquier[3][3] = new Roi('b');
+        echiquier[3][3] = new Cavalier('b');
         //echiquier[3][3] = new Dame('b');
     }
 
