@@ -4,6 +4,8 @@ import JeuEchecs.src.com.echecs.pieces.*;
 import JeuEchecs.src.com.echecs.util.EchecsUtil;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import java.util.Arrays;
+
 /**
  * Représente une partie de jeu d'échecs. Orcheste le déroulement d'une partie :
  * déplacement des pièces, vérification d'échec, d'échec et mat,...
@@ -36,31 +38,37 @@ public class PartieEchecs {
         //Placement des pièces :
 
         // Pions
-        for(int i = 0; i < 8; i ++){
-            echiquier[i][6] = new Pion('n');
-            echiquier[i][1] = new Pion('b');
-        }
+        //for(int i = 0; i < 8; i ++){
+        //    echiquier[i][6] = new Pion('n');
+       //     echiquier[i][1] = new Pion('b');
+       // }
         // Tours
-        echiquier[0][0] = new Tour('b');
-        echiquier[7][0] = new Tour('b');
-        echiquier[0][7] = new Tour('n');
-        echiquier[7][7] = new Tour('n');
+       // echiquier[0][0] = new Tour('b');
+       // echiquier[7][0] = new Tour('b');
+      //  echiquier[0][7] = new Tour('n');
+      //  echiquier[7][7] = new Tour('n');
         // Cavaliers
-        echiquier[1][0] = new Cavalier('b');
-        echiquier[6][0] = new Cavalier('b');
-        echiquier[1][7] = new Cavalier('n');
-        echiquier[6][7] = new Cavalier('n');
+      //  echiquier[1][0] = new Cavalier('b');
+     //   echiquier[6][0] = new Cavalier('b');
+     //   echiquier[1][7] = new Cavalier('n');
+     //   echiquier[6][7] = new Cavalier('n');
         // Fous
-        echiquier[2][0] = new Fou('b');
-        echiquier[5][0] = new Fou('b');
-        echiquier[2][7] = new Fou('n');
-        echiquier[5][7] = new Fou('n');
+     //   echiquier[2][0] = new Fou('b');
+     //   echiquier[5][0] = new Fou('b');
+    //    echiquier[2][7] = new Fou('n');
+    //    echiquier[5][7] = new Fou('n');
         // Dame
-        echiquier[3][0] = new Dame('b');
-        echiquier[3][7] = new Dame('n');
+     //   echiquier[3][0] = new Dame('b');
+     //   echiquier[3][7] = new Dame('n');
         // Roi
-        echiquier[4][0] = new Roi('b');
-        echiquier[4][7] = new Roi('n');
+     //   echiquier[4][0] = new Roi('b');
+      //  echiquier[4][7] = new Roi('n');
+
+        echiquier[4][7] = new Roi('b');
+        echiquier[3][7] = new Tour('b');
+        //echiquier[2][5] = new Fou('n');
+        echiquier[4][0] = new Roi('n');
+        echiquier[7][6] = new Tour('n');
     }
 
     /**
@@ -116,7 +124,7 @@ public class PartieEchecs {
                 System.out.println("La destination est occupee par une piece qui vous appartient.");
                 return false;
             }
-        } catch (Exception e){}
+        } catch (Exception ignored){}
 
         // When all checks are done, call peutSeDeplacer
         if(echiquier[EchecsUtil.indiceColonne(initiale.getColonne())][initiale.getLigne()].peutSeDeplacer(initiale, finale, echiquier)){
@@ -126,7 +134,7 @@ public class PartieEchecs {
             echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()] = echiquier[EchecsUtil.indiceColonne(initiale.getColonne())][initiale.getLigne()];
             echiquier[EchecsUtil.indiceColonne(initiale.getColonne())][initiale.getLigne()] = null;
 
-            // determiner si le joueur est mis en echec ou reste en echec apres le deplacement
+            // determiner si le joueur est en echec apres le deplacement
             if(couleurTemp == estEnEchec()){
                 System.out.println("Ce deplacement est invalide, car vous etes en echec.");
                 // replace la piece a la position initiale
@@ -153,7 +161,54 @@ public class PartieEchecs {
      * si le roi blanc est en échec, tout autre caractère, sinon.
      */
     public char estEnEchec() {
-            throw new NotImplementedException();
+        // trouver la position des instances de roi
+        int[][] roiIndexes = new int[2][2];
+        int index = 0;
+
+        for(int c = 0; c < echiquier.length; c ++) {
+            for (int l = 0; l < echiquier[c].length; l++) {
+                if (echiquier[c][l] instanceof Roi) {
+                    roiIndexes[index][0] = c;
+                    roiIndexes[index][1] = l;
+                    index++;
+                }
+            }
+        }
+
+        // Voir si chaque piece peut se deplacer au roi de la couleur opposee
+        for(int c = 0; c < echiquier.length; c ++){
+            for(int l = 0; l < echiquier[c].length; l ++){
+                Position ini = new Position(EchecsUtil.getColonne((byte)c),(byte)l);
+
+                // if there is no piece, ignore this position
+                if(echiquier[c][l] == null){
+                    continue;
+                }
+                if(echiquier[c][l].getCouleur() == 'b' && echiquier[roiIndexes[0][0]][roiIndexes[0][1]].getCouleur() != 'b'){
+                    Position fin = new Position(EchecsUtil.getColonne((byte)roiIndexes[0][0]),(byte)roiIndexes[0][1]);
+                    if(echiquier[c][l].peutSeDeplacer(ini, fin, echiquier)){
+                        return 'n';
+                    }
+                } else if(echiquier[c][l].getCouleur() == 'n' && echiquier[roiIndexes[0][0]][roiIndexes[0][1]].getCouleur() != 'n'){
+                    Position fin = new Position(EchecsUtil.getColonne((byte)roiIndexes[0][0]),(byte)roiIndexes[0][1]);
+                    if(echiquier[c][l].peutSeDeplacer(ini, fin, echiquier)){
+                        return 'b';
+                    }
+                }
+                if(echiquier[c][l].getCouleur() == 'b' && echiquier[roiIndexes[1][0]][roiIndexes[1][1]].getCouleur() != 'b'){
+                    Position fin = new Position(EchecsUtil.getColonne((byte)roiIndexes[1][0]),(byte)roiIndexes[1][1]);
+                    if(echiquier[c][l].peutSeDeplacer(ini, fin, echiquier)){
+                        return 'n';
+                    }
+                } else if(echiquier[c][l].getCouleur() == 'n' && echiquier[roiIndexes[1][0]][roiIndexes[1][1]].getCouleur() != 'n'){
+                    Position fin = new Position(EchecsUtil.getColonne((byte)roiIndexes[1][0]),(byte)roiIndexes[1][1]);
+                    if(echiquier[c][l].peutSeDeplacer(ini, fin, echiquier)){
+                        return 'b';
+                    }
+                }
+            }
+        }
+        return 'p';
     }
     /**
      * Retourne la couleur n ou b du joueur qui a la main.
