@@ -1,6 +1,6 @@
 package ChatClient.src.com.chat.client;
 
-import ChatServer.src.com.JeuEchecs.src.com.echecs.Position;
+import JeuEchecs.src.com.echecs.Position;
 
 public class EtatPartieEchecs
 {
