@@ -5,29 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="03dab627-61b0-4869-8da1-0f5d78144578" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ChatServer/src/com/JeuEchecs/src/com/echecs/PartieEchecs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ChatServer/src/com/JeuEchecs/src/com/echecs/pieces/Cavalier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ChatServer/src/com/JeuEchecs/src/com/echecs/pieces/Dame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ChatServer/src/com/JeuEchecs/src/com/echecs/pieces/Fou.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ChatServer/src/com/JeuEchecs/src/com/echecs/pieces/Pion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ChatServer/src/com/JeuEchecs/src/com/echecs/pieces/Roi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ChatServer/src/com/JeuEchecs/src/com/echecs/pieces/Tour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChatClient/src/com/chat/programme/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatClient/src/com/chat/programme/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChatServer/src/com/chat/commun/evenement/Evenement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/chat/commun/evenement/Evenement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChatServer/src/com/chat/commun/evenement/EvenementUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/chat/commun/evenement/EvenementUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChatServer/src/com/chat/commun/evenement/GestionnaireEvenement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/chat/commun/evenement/GestionnaireEvenement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChatServer/src/com/chat/commun/net/Connexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/chat/commun/net/Connexion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChatServer/src/com/chat/commun/thread/Lecteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/chat/commun/thread/Lecteur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChatServer/src/com/chat/commun/thread/ThreadEcouteurDeTexte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/chat/commun/thread/ThreadEcouteurDeTexte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChatServer/src/com/chat/programme/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/chat/programme/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/GestionnaireEvenementServeur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/GestionnaireEvenementServeur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/Serveur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/Serveur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChatClient/src/com/chat/client/ClientChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatClient/src/com/chat/client/ClientChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChatClient/src/com/chat/client/EtatPartieEchecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatClient/src/com/chat/client/EtatPartieEchecs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/SalonPrive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/SalonPrive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/ServeurChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/ServeurChat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/ThreadEcouteurDeConnexions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/chat/serveur/ThreadEcouteurDeConnexions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JeuEchecs/src/com/echecs/PartieEchecs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JeuEchecs/src/com/echecs/PartieEchecs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JeuEchecs/src/com/echecs/programme/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JeuEchecs/src/com/echecs/programme/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JeuEchecs/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/JeuEchecs/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JeuEchecs/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/JeuEchecs/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JeuEchecs/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/JeuEchecs/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JeuEchecs/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/JeuEchecs/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JeuEchecs/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/JeuEchecs/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JeuEchecs/JeuEchecs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/JeuEchecs/JeuEchecs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JeuEchecs/src/com/echecs/PartieEchecs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JeuEchecs/src/com/echecs/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/JeuEchecs/src/com/echecs/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JeuEchecs/src/com/echecs/pieces/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/JeuEchecs/src/com/echecs/pieces/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JeuEchecs/src/com/echecs/programme/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/JeuEchecs/src/com/echecs/programme/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JeuEchecs/src/com/echecs/util/EchecsUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatServer/src/com/JeuEchecs/src/com/echecs/util/EchecsUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Question-4" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -42,26 +62,846 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Dell/IdeaProjects/TP1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Dell/IdeaProjects/TP1/src/ChatServer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dell\IdeaProjects\TP1\src\ChatServer" />
+      <recent name="C:\Users\Dell\IdeaProjects\TP1\src\ChatServer\src\com" />
+      <recent name="C:\Users\Dell\IdeaProjects\TP1\src\ChatClient" />
+      <recent name="C:\Users\Dell\IdeaProjects\TP1\src\JeuEchecs" />
       <recent name="C:\Users\Dell\IdeaProjects\TP1" />
-      <recent name="C:\Users\Dell\IdeaProjects\TP1\src" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main (10)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (11)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (12)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (13)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (14)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (15)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (16)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (17)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (18)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (19)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (20)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (21)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (22)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (23)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (24)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (25)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (26)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (27)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (28)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (29)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (30)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (31)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (32)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (33)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (34)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (35)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (36)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (37)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (38)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (39)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (3)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (40)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (41)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (42)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (43)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (44)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (45)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (46)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (47)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (48)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (49)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (4)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (50)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (51)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (52)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (53)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (54)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (55)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (56)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (57)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (58)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (59)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (5)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (60)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (61)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (62)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (6)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (7)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (8)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (9)" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatClient.src.com.chat.programme.Main" />
+      <module name="TP1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ChatClient.src.com.chat.programme.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main (62)" />
+        <item itemvalue="Application.Main (61)" />
+        <item itemvalue="Application.Main (60)" />
+        <item itemvalue="Application.Main (59)" />
+        <item itemvalue="Application.Main (58)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

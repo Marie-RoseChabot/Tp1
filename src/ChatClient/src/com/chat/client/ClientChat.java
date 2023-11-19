@@ -1,7 +1,5 @@
 package ChatClient.src.com.chat.client;
 
-import JeuEchecs.src.com.echecs.Position;
-
 /**
  * Cette classe étend la classe Client pour lui ajouter des fonctionnalités
  * spécifiques au chat et au jeu d'échecs en réseau.
@@ -85,7 +83,7 @@ public class ClientChat extends Client
 				if(pInitX == i && pInitY == j)
 				{
 					pawn = echiquier[i][j];
-					echiquier[i][j] = ' ';// CASE VIDE
+					echiquier[i][j] = '.';// CASE VIDE
 				}
 				if(pFinalX == i && pFinalY == j)
 				{
@@ -94,7 +92,7 @@ public class ClientChat extends Client
 			}
 		}
 		
-		etatPartieEchecs.setEtatEchiquier(echiquier); 
+		etatPartieEchecs.setEtatEchiquier(pInitX-1,pInitY-1,pFinalX-1,pFinalY-1);
 	}
 
 	private int getPositionLigne(String position)
@@ -105,7 +103,7 @@ public class ClientChat extends Client
         for (int i = 0; i < ligne.length; i++) 
         {
             if (position.equals(ligne[i])) {
-                index = i;
+                index = ligne.length-i;
             }
         }
         

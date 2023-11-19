@@ -1,10 +1,12 @@
 package ChatServer.src.com.chat.serveur;
 
+import ChatClient.src.com.chat.client.EtatPartieEchecs;
+import ChatServer.src.com.JeuEchecs.src.com.echecs.util.EchecsUtil;
 import ChatServer.src.com.chat.commun.net.Connexion;
-import JeuEchecs.src.com.echecs.PartieEchecs;
-import JeuEchecs.src.com.echecs.Position;
+import ChatServer.src.com.JeuEchecs.src.com.echecs.PartieEchecs;
+import ChatServer.src.com.JeuEchecs.src.com.echecs.Position;
 
-import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Vector;
 
 /**
@@ -274,9 +276,9 @@ public class ServeurChat extends Serveur {
 	    		if(cnx.getAlias().toLowerCase().equals(aliasInvite))
 	    		{
 	    			if(!isChessInvitation)
-	    				cnx.envoyer(aliasHote + " souhaite te parler en priver. JOIN (accepter) ou DECLINE (refuser)");
+	    				cnx.envoyer(aliasHote + " souhaite te parler en privé. JOIN (accepter) ou DECLINE (refuser)");
 	    			else
-	    				cnx.envoyer(aliasHote + " souhaite jouer au echec avec toi. CHESS (accepter) ou DECLINE (refuser)");
+	    				cnx.envoyer(aliasHote + " souhaite jouer au échec avec toi. CHESS (accepter) ou DECLINE (refuser)");
 	    		}
     		}
         }
@@ -301,7 +303,7 @@ public class ServeurChat extends Serveur {
     			
     	    	for (Connexion cnx: connectes) {
     	    		if(cnx.getAlias().toLowerCase().equals(aliasWhoInvited))	    			
-    	    			cnx.envoyer(aliasWhoWasInvited + " a refuser ton invitation !");
+    	    			cnx.envoyer(aliasWhoWasInvited + " a refusé ton invitation !");
     	    	}
             }
             
@@ -317,7 +319,7 @@ public class ServeurChat extends Serveur {
 	
 	
 	/***
-	 * Permet de voir qui nous a envoye une invitation
+	 * Permet de voir qui nous a envoyé une invitation
 	 * @param alias 
 	 * @return
 	 */
@@ -335,7 +337,7 @@ public class ServeurChat extends Serveur {
     }
     
     /***
-     * Permet d'envoyer des messages priver dand un salon priver.
+     * Permet d'envoyer des messages privés dans un salon privé.
      * @param msg
      * @param aliasExpediteur
      * @param aliasToSendMsg
@@ -344,7 +346,7 @@ public class ServeurChat extends Serveur {
     {
         for (SalonPrive salon : salonPrive) 
         {
-        	//Permet a l'utilisateur qui a cree l'invitation d'envoyer un message a l'autre utilisateur
+        	//Permet a l'utilisateur qui a créé l'invitation d'envoyer un message a l'autre utilisateur
             if (salon.getAliasHote().equals(aliasExpediteur) && salon.getAliasInvite().equals(aliasToSendMsg)) 
             {
     	    	for (Connexion cnx: connectes) {
@@ -352,7 +354,7 @@ public class ServeurChat extends Serveur {
     	    			cnx.envoyer(aliasExpediteur + ">>" + msg);
     	    	}
             }
-            //Permet a recu l'invitation d'envoyer un message.
+            //Permet celui qui a reçu l'invitation d'envoyer un message.
             if (salon.getAliasHote().equals(aliasToSendMsg) && salon.getAliasInvite().equals(aliasExpediteur)) 
             {
     	    	for (Connexion cnx: connectes) {
@@ -365,7 +367,7 @@ public class ServeurChat extends Serveur {
     
    
     /***
-     * Permet de quitter un Salon priver.
+     * Permet de quitter un Salon privé.
      * @param aliasExpediteur
      */
     public void leaveSalonPriver(String aliasExpediteur) 
@@ -375,25 +377,25 @@ public class ServeurChat extends Serveur {
 		
         for (SalonPrive salon : salonPrive) 
         {
-            //Permet a l'utilisateur qui a recu l'invitation de quitter le salon.
+            //Permet a l'utilisateur qui a reçu l'invitation de quitter le salon.
             if (salon.getAliasHote().equals(aliasExpediteur)) 
             {
             	salonToDelete = salon;
             	
     	    	for (Connexion cnx: connectes) {
     	    		if(cnx.getAlias().toLowerCase().equals(salon.getAliasHote()))	    			
-    	    			cnx.envoyer(salon.getAliasInvite() + " a quitter le salon.");
+    	    			cnx.envoyer(salon.getAliasInvite() + " a quitté le salon.");
     	    	}
             }
             
-            //Permet a l'utilisateur qui a cree l'invitation de quitter le salon priver.
+            //Permet a l'utilisateur qui a créé l'invitation de quitter le salon privé.
             if (salon.getAliasInvite().equals(aliasExpediteur)) 
             {
             	salonToDelete = salon;
             	
     	    	for (Connexion cnx: connectes) {
     	    		if(cnx.getAlias().toLowerCase().equals(salon.getAliasInvite()))	    			
-    	    			cnx.envoyer(salon.getAliasHote() + " a quitter le salon.");
+    	    			cnx.envoyer(salon.getAliasHote() + " a quitté le salon.");
     	    	}
             }
         }
@@ -411,12 +413,14 @@ public class ServeurChat extends Serveur {
     	//Permet de savoir la couleur du joueur et de son adversaire
     	char aliasPawnColor, opponentPawnColor;
     	
-    	//Le salon ou se deruole la partie d'echec
+    	//Le salon ou se deroule la partie d'echec
     	SalonPrive salonEchec = null;
     	
     	//La partie d'echec que le joueur joue
-    	PartieEchecs partieEchec = null;
-    	
+    	PartieEchecs partieEchec = new PartieEchecs();
+
+		EtatPartieEchecs etatPartieEchecs=new EtatPartieEchecs();
+
     	//La position initial et final d'un pion
     	Position posInit, posFinal = null;
     	
@@ -432,7 +436,7 @@ public class ServeurChat extends Serveur {
 		if(partieEchec != null)
 		{
 			//On recupere la couleur de notre joueur
-			aliasPawnColor = (alias == partieEchec.getAliasJoueur1() ? partieEchec.getCouleurJoueur1() : partieEchec.getCouleurJoueur2());
+			aliasPawnColor = (Objects.equals(alias, partieEchec.getAliasJoueur1()) ? partieEchec.getCouleurJoueur1() : partieEchec.getCouleurJoueur2());
 			
 			//On recupere la couleur de notre adversaire
 			opponentPawnColor = (aliasPawnColor == 'b' ? 'n' : 'b');
@@ -447,29 +451,38 @@ public class ServeurChat extends Serveur {
 					String  pinit = position.split("[\\s\\-]")[0];
 					String pfinal = position.split("[\\s\\-]")[1];
 		
-					posInit = new Position(pinit.charAt(0), (byte)pinit.charAt(1));
-					posFinal = new Position(pfinal.charAt(0), (byte)pfinal.charAt(1));
+					posInit = new Position(pinit.charAt(0), (byte) ((byte)pinit.charAt(1)-48));
+					posFinal = new Position(pfinal.charAt(0), (byte) ((byte)pfinal.charAt(1)-48));
+
 				}
 				else
 				{
 					String  pinit = position.substring(0, 2);
 					String pfinal = position.substring(2, 4);
 					
-					posInit = new Position(pinit.charAt(0), (byte)pinit.charAt(1));
-					posFinal = new Position(pfinal.charAt(0), (byte)pfinal.charAt(1));
+					posInit = new Position(pinit.charAt(0), (byte) ((byte)pinit.charAt(1)-48));
+					posFinal = new Position(pfinal.charAt(0), (byte) ((byte)pfinal.charAt(1)-48));
+
 				}
-				
-				//Verifie si le deplacement a ete reussi
-				if(partieEchec.deplace(posInit, posFinal))
+
+				//Verifie si le déplacement a été reussi
+				if(partieEchec.deplace(partieEchec,posInit, posFinal))
 				{
+
 					//update de la partie dans le salon.
 					salonEchec.setPartieEchecs(partieEchec);
-					
-			    	for (Connexion cnx: connectes)
+
+
+					etatPartieEchecs.setEtatEchiquier(EchecsUtil.indiceColonne(posInit.getColonne()),EchecsUtil.indiceLigne(posInit.getLigne()),EchecsUtil.indiceColonne(posFinal.getColonne()),EchecsUtil.indiceLigne(posFinal.getLigne()));
+			    	System.out.println(etatPartieEchecs.toString());
+
+
+					for (Connexion cnx: connectes)
 			    	{	
 			    		if(cnx.getAlias().equals(partieEchec.getAliasJoueur1()) || cnx.getAlias().equals(partieEchec.getAliasJoueur2()))
 			    		{
 			    			cnx.envoyer("MOVE " + position);
+
 			    		}
 			    		
 			    		//Verifie si notre joueur est en echec.

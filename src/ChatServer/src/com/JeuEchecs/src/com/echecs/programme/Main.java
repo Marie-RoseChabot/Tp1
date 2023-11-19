@@ -1,6 +1,6 @@
-package JeuEchecs.src.com.echecs.programme;
+package ChatServer.src.com.JeuEchecs.src.com.echecs.programme;
 
-import JeuEchecs.src.com.echecs.util.EchecsUtil;
+import ChatServer.src.com.JeuEchecs.src.com.echecs.util.EchecsUtil;
 /**
  * Programme pour tester les classes de jeu d'échecs.
  *

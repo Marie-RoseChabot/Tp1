@@ -1,6 +1,8 @@
 package ChatClient.src.com.chat.client;
 
-public class EtatPartieEchecs 
+import ChatServer.src.com.JeuEchecs.src.com.echecs.Position;
+
+public class EtatPartieEchecs
 {
 	private char[][] etatEchiquier;
 	
@@ -22,8 +24,8 @@ public class EtatPartieEchecs
 		return etatEchiquier;
 	}
 	
-	public void setEtatEchiquier(char[][] etatEchiquier) {
-		this.etatEchiquier = etatEchiquier;
+	public void setEtatEchiquier(int initX,int initY, int finX, int finY) {
+		etatEchiquier[finX][finY]=etatEchiquier[initX][initY];
 	}
 	
 	@Override
@@ -32,7 +34,7 @@ public class EtatPartieEchecs
 		String tableau = "";
 		for(int i = 0; i < etatEchiquier.length; i++)
 		{
-			tableau += i + 1 + " ";
+			tableau += etatEchiquier.length-i + " ";
 			
 			for(int j = 0; j < etatEchiquier.length; j++)
 			{

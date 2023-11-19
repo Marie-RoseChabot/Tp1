@@ -1,6 +1,6 @@
-package JeuEchecs.src.com.echecs.util;
+package ChatServer.src.com.JeuEchecs.src.com.echecs.util;
 
-import JeuEchecs.src.com.echecs.Position;
+import ChatServer.src.com.JeuEchecs.src.com.echecs.Position;
 
 /**
  * Classe utilitaire pour le jeu d'échecs.
