@@ -25,13 +25,17 @@ public class EtatPartieEchecs
 	}
 	
 	public void setEtatEchiquier(int initX,int initY, int finX, int finY) {
-		etatEchiquier[finX][finY]=etatEchiquier[initX][initY];
+
+		etatEchiquier[finY][finX]=etatEchiquier[initY][initX];
+		etatEchiquier[initY][initX]=' ';
+
 	}
 	
 	@Override
 	public String toString()
 	{
 		String tableau = "";
+		tableau += "\n\t\t\t";
 		for(int i = 0; i < etatEchiquier.length; i++)
 		{
 			tableau += etatEchiquier.length-i + " ";
@@ -40,8 +44,8 @@ public class EtatPartieEchecs
 			{
 				tableau += etatEchiquier[i][j] + " ";
 			}
-			
-			tableau += "\n";
+			tableau += "\n\t\t\t.";
+
 		}
 		
 		tableau += "  a b c d e f g h";

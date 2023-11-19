@@ -27,6 +27,7 @@ public class ServeurChat extends Serveur {
     
     //Liste de tous les salon prives du serveur
     private Vector<SalonPrive> salonPrive = new Vector<SalonPrive>();
+	EtatPartieEchecs etatPartieEchecs = new EtatPartieEchecs();
     
     //Liste de tous les partie d'echecs du serveur.
     private Vector<SalonPrive> gameChess = new Vector<SalonPrive>();
@@ -419,7 +420,7 @@ public class ServeurChat extends Serveur {
     	//La partie d'echec que le joueur joue
     	PartieEchecs partieEchec = new PartieEchecs();
 
-		EtatPartieEchecs etatPartieEchecs=new EtatPartieEchecs();
+
 
     	//La position initial et final d'un pion
     	Position posInit, posFinal = null;
@@ -474,14 +475,14 @@ public class ServeurChat extends Serveur {
 
 
 					etatPartieEchecs.setEtatEchiquier(EchecsUtil.indiceColonne(posInit.getColonne()),EchecsUtil.indiceLigne(posInit.getLigne()),EchecsUtil.indiceColonne(posFinal.getColonne()),EchecsUtil.indiceLigne(posFinal.getLigne()));
-			    	System.out.println(etatPartieEchecs.toString());
+
 
 
 					for (Connexion cnx: connectes)
 			    	{	
 			    		if(cnx.getAlias().equals(partieEchec.getAliasJoueur1()) || cnx.getAlias().equals(partieEchec.getAliasJoueur2()))
 			    		{
-			    			cnx.envoyer("MOVE " + position);
+			    			cnx.envoyer("\n"+etatPartieEchecs.toString());
 
 			    		}
 			    		
