@@ -1,6 +1,5 @@
 package JeuEchecs.src.com.echecs;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 /**
  * Représente une position sur un échiquier de jeu d'échecs. Les lignes de
  * l'échiquier sont numérotées de 8 à 1 et les colonnes de a à h.
@@ -40,9 +39,8 @@ public class Position {
      * @param p Position La position à comparer avec this.
      * @return boolean true si les 2 positions sont voisines, false sinon.
      */
-    public boolean estVoisineDe(Position p) {
-        return this.getLigne() - p.ligne < 2 && this.getLigne() - p.ligne > -2
-                && (int) this.getColonne() - (int) p.colonne < 2 && (int) this.getColonne() - (int) p.colonne > -2;
+    public boolean estVoisineDe(Position p) throws Exception {
+        throw new UnsupportedOperationException();
     }
     /**
      * Indique si 2 positions sont sur la même ligne sur un échiquier.
@@ -50,8 +48,8 @@ public class Position {
      * @param p Position La position à comparer avec this.
      * @return boolean true si les 2 positions sont sur la même ligne, false sinon.
      */
-    public boolean estSurLaMemeLigneQue(Position p) {
-        return this.getLigne() == p.ligne;
+    public boolean estSurLaMemeLigneQue(Position p) throws Exception {
+        throw new UnsupportedOperationException();
     }
     /**
      * Indique si 2 positions sont sur la même colonne sur un échiquier.
@@ -60,7 +58,7 @@ public class Position {
      * @return boolean true si les 2 positions sont sur la même colonne, false sinon.
      */
     public boolean estSurLaMemeColonneQue(Position p) {
-        return (int) this.getColonne() == (int) p.colonne;
+        throw new UnsupportedOperationException();
     }
     /**
      * Indique si 2 positions sont sur la même diagonale sur un échiquier.
@@ -68,7 +66,7 @@ public class Position {
      * @param p Position La position à comparer avec this.
      * @return boolean true si les 2 positions sont sur la même diagonale, false sinon.
      */
-    public boolean estSurLaMemeDiagonaleQue(Position p) {
-        return Math.abs(this.getLigne() - p.ligne) == Math.abs((int) this.getColonne() - (int) p.colonne);
+    public boolean estSurLaMemeDiagonaleQue(Position p) throws Exception {
+        throw new UnsupportedOperationException();
     }
 }

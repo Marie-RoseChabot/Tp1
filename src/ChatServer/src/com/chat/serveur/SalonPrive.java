@@ -1,18 +1,34 @@
 package ChatServer.src.com.chat.serveur;
 
-public class SalonPrive {
-    String aliasHote,aliasInvite;
+import JeuEchecs.src.com.echecs.PartieEchecs;
 
-    public SalonPrive(String aliasHote,String aliasInvite){
-        this.aliasHote=aliasHote;
-        this.aliasInvite=aliasInvite;
-    }
+public class SalonPrive 
+{
+	private String aliasHote;
+	
+	private String aliasInvite;
 
-    public String getAliasHote(){
-        return aliasHote;
-    }
+	private PartieEchecs partieEchecs;
 
-    public String getAliasInvite(){
-        return aliasInvite;
-    }
+	public SalonPrive(String aliasHote, String aliasInvite)
+	{
+		this.aliasHote = aliasHote;
+		this.aliasInvite = aliasInvite;
+	}
+	
+	public String getAliasHote() {
+		return aliasHote;
+	}
+
+	public String getAliasInvite() {
+		return aliasInvite;
+	}
+	
+	public PartieEchecs getPartieEchecs() {
+		return partieEchecs;
+	}
+
+	public void setPartieEchecs(PartieEchecs partieEchecs) {
+		this.partieEchecs = partieEchecs;
+	}
 }
