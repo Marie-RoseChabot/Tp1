@@ -13,8 +13,8 @@ public class Pion extends Piece{
                 // check if the target position is occupied by a piece of another color, if so diagonal movement is possible
                 this.getCouleur() == 'b' && pos2.getLigne() - pos1.getLigne() == 1 && pos2.estSurLaMemeDiagonaleQue(pos1) ||
                 this.getCouleur() == 'n' && pos1.getLigne() - pos2.getLigne() == 1 && pos2.estSurLaMemeDiagonaleQue(pos1) ||
-                this.getCouleur() == 'b' && pos1.getLigne() == 1 && pos2.getLigne() - pos1.getLigne() == 2 ||
-                this.getCouleur() == 'n' && pos1.getLigne() == 1 && pos1.getLigne() - pos2.getLigne() == 2){
+                this.getCouleur() == 'b' && pos1.getLigne() == 2 && pos2.getLigne() - pos1.getLigne() == 2 && pos2.estSurLaMemeColonneQue(pos1) ||
+                this.getCouleur() == 'n' && pos1.getLigne() == 7 && pos1.getLigne() - pos2.getLigne() == 2 && pos2.estSurLaMemeColonneQue(pos1)){
             return true;
         }
         return false;

@@ -138,7 +138,7 @@ public class PartieEchecs {
         // voir si la position finale est associee a une piece. Le joueur tente de manger une piece qui l'appartient
         try {
             echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())].getClass();
-            if(echiquier[EchecsUtil.indiceColonne(initiale.getColonne())][EchecsUtil.indiceLigne(initiale.getLigne())].getCouleur() == echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()].getCouleur()){
+            if(echiquier[EchecsUtil.indiceColonne(initiale.getColonne())][EchecsUtil.indiceLigne(initiale.getLigne())].getCouleur() == echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())].getCouleur()){
                 System.out.println("La destination est occupee par une piece qui vous appartient.");
                 return false;
             }
@@ -162,16 +162,16 @@ public class PartieEchecs {
             }
 
             // Check if a pawn got to the last line, if so create Dame
-            if(echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())] instanceof Pion && finale.getLigne() == 7 && echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()].getCouleur() == 'b'){
+            if(echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())] instanceof Pion && finale.getLigne() == 8 && echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())].getCouleur() == 'b'){
                 echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())] = new Dame('b');
-            } else if(echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())] instanceof Pion && finale.getLigne() == 0 && echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()].getCouleur() == 'n'){
+            } else if(echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())] instanceof Pion && finale.getLigne() == 1 && echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())].getCouleur() == 'n'){
                 echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())] = new Dame('n');
             }
 
             // Check if moved piece was Tour or Roi
-            if(echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())] instanceof Roi || echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()] instanceof Tour){
+            if(echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())] instanceof Roi || echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())] instanceof Tour){
                 // si la piece deplacee est un roi noir
-                if(echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())].getCouleur() == 'n' && echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()] instanceof Roi){
+                if(echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())].getCouleur() == 'n' && echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())] instanceof Roi){
                     // roque vers la gauche
                     if(EchecsUtil.indiceColonne(initiale.getColonne()) - EchecsUtil.indiceColonne(finale.getColonne()) == 2){
                         // Si la voie est libre, deplace la tour aussi
@@ -193,7 +193,7 @@ public class PartieEchecs {
                     }
                     broque = false;
                     // si la piece deplacee est un roi blanc
-                } else if (echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())].getCouleur() == 'b' && echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()] instanceof Roi) {
+                } else if (echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())].getCouleur() == 'b' && echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())] instanceof Roi) {
                     // roque vers la gauche
                     if(EchecsUtil.indiceColonne(initiale.getColonne()) - EchecsUtil.indiceColonne(finale.getColonne()) == 2){
                         // Si la voie est libre, deplace la tour aussi
@@ -202,7 +202,7 @@ public class PartieEchecs {
                             echiquier[0][0] = null;
                         } else {
                             // replace la piece a la position initiale
-                            echiquier[EchecsUtil.indiceColonne(initiale.getColonne())][EchecsUtil.indiceLigne(initiale.getLigne())] = echiquier[EchecsUtil.indiceColonne(finale.getColonne())][finale.getLigne()];
+                            echiquier[EchecsUtil.indiceColonne(initiale.getColonne())][EchecsUtil.indiceLigne(initiale.getLigne())] = echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())];
                             echiquier[EchecsUtil.indiceColonne(finale.getColonne())][EchecsUtil.indiceLigne(finale.getLigne())] = temp;
                             return false;
                         }

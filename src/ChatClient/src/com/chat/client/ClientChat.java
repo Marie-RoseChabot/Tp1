@@ -10,6 +10,7 @@ package ChatClient.src.com.chat.client;
  */
 public class ClientChat extends Client 
 {
+	private boolean start = false;
 	private EtatPartieEchecs etatPartieEchecs;
 	
 	public void nouvellePartie() {
@@ -38,12 +39,15 @@ public class ClientChat extends Client
 	 */
 	public String ChessGameMap() 
 	{
-		return getEtatPartieEchecs().toString();
+		if(start) {
+			return getEtatPartieEchecs().toString();
+		} else {
+			return getEtatPartieEchecs().toStringStart();
+		}
 	}
 
 	/***
 	 * Permet de mettre a jour la position d'un pion.
-	 * @param argument
 	 */
 	public void movePawn(String position) {
 		//La valeur du pion en position inital
@@ -103,7 +107,7 @@ public class ClientChat extends Client
         for (int i = 0; i < ligne.length; i++) 
         {
             if (position.equals(ligne[i])) {
-                index = ligne.length-i;
+                index = i;
             }
         }
         
