@@ -1,6 +1,6 @@
-package JeuEchecs.src.com.echecs.util;
+package ChatServer.src.com.JeuEchecs.src.com.echecs.util;
 
-import JeuEchecs.src.com.echecs.Position;
+import ChatServer.src.com.JeuEchecs.src.com.echecs.Position;
 
 /**
  * Classe utilitaire pour le jeu d'échecs.
@@ -23,7 +23,7 @@ public class EchecsUtil {
      * @return Position position de la case
      */
     public static Position getPosition(byte i, byte j) {
-        byte ligne = (byte)(8-i);
+        byte  ligne = (byte)(8-i);
         char colonne = (char)('a'+j);
         return new Position(colonne,ligne);
     }

@@ -1,7 +1,7 @@
-package JeuEchecs.src.com.echecs.pieces;
+package ChatServer.src.com.JeuEchecs.src.com.echecs.pieces;
 
-import JeuEchecs.src.com.echecs.Position;
-import JeuEchecs.src.com.echecs.util.EchecsUtil;
+import ChatServer.src.com.JeuEchecs.src.com.echecs.Position;
+import ChatServer.src.com.JeuEchecs.src.com.echecs.util.EchecsUtil;
 
 public class Roi extends Piece{
     public Roi(char couleur) {

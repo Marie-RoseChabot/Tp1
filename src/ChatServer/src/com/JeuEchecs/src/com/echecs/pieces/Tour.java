@@ -1,7 +1,7 @@
-package JeuEchecs.src.com.echecs.pieces;
+package ChatServer.src.com.JeuEchecs.src.com.echecs.pieces;
 
-import JeuEchecs.src.com.echecs.Position;
-import JeuEchecs.src.com.echecs.util.EchecsUtil;
+import ChatServer.src.com.JeuEchecs.src.com.echecs.Position;
+import ChatServer.src.com.JeuEchecs.src.com.echecs.util.EchecsUtil;
 
 public class Tour extends Piece{
     public Tour(char couleur) {
@@ -9,7 +9,7 @@ public class Tour extends Piece{
     }
     public boolean peutSeDeplacer(Position pos1, Position pos2, Piece[][] echiquier) {
         // regarde si le deplacement est legal
-            // deplacement vetical vers le bas
+        // deplacement vetical vers le bas
         if(pos2.estSurLaMemeColonneQue(pos1) && pos2.getLigne() - pos1.getLigne() < 0){
             for(int l = pos2.getLigne() + 1; l < pos1.getLigne(); l ++){
                 if(echiquier[EchecsUtil.indiceColonne(pos2.getColonne())][l] != null){

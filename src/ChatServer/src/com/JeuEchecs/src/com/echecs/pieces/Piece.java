@@ -1,6 +1,6 @@
-package JeuEchecs.src.com.echecs.pieces;
+package ChatServer.src.com.JeuEchecs.src.com.echecs.pieces;
 
-import JeuEchecs.src.com.echecs.Position;
+import ChatServer.src.com.JeuEchecs.src.com.echecs.Position;
 /**
  * Représente une pièce dans un jeu d'échecs. Cette classe abstraite constitue
  * la base pour les classes de pièces concrètes.

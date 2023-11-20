@@ -1,6 +1,5 @@
-package JeuEchecs.src.com.echecs;
+package ChatServer.src.com.JeuEchecs.src.com.echecs;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 /**
  * Représente une position sur un échiquier de jeu d'échecs. Les lignes de
  * l'échiquier sont numérotées de 8 à 1 et les colonnes de a à h.

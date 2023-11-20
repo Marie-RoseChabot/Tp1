@@ -1,6 +1,6 @@
 package ChatServer.src.com.chat.serveur;
 
-import JeuEchecs.src.com.echecs.PartieEchecs;
+import ChatServer.src.com.JeuEchecs.src.com.echecs.PartieEchecs;
 
 public class SalonPrive 
 {

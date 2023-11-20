@@ -3,6 +3,7 @@ package ChatClient.src.com.chat.client;
 import ChatClient.src.com.chat.commun.evenement.Evenement;
 import ChatClient.src.com.chat.commun.evenement.GestionnaireEvenement;
 import ChatClient.src.com.chat.commun.net.Connexion;
+import ChatServer.src.com.chat.serveur.ServeurChat;
 
 /**
  * Cette classe représente un gestionnaire d'événement d'un client. Lorsqu'un client reçoit un texte d'un serveur,
@@ -33,8 +34,9 @@ public class GestionnaireEvenementClient implements GestionnaireEvenement {
         Object source = evenement.getSource();
         Connexion cnx;
         String typeEvenement, arg;
-        String[] membres;
-
+        String[] membres, historique;
+        ClientChat client = (ClientChat) this.client;
+        
         if (source instanceof Connexion) {
             cnx = (Connexion) source;
             typeEvenement = evenement.getType();
@@ -49,6 +51,27 @@ public class GestionnaireEvenementClient implements GestionnaireEvenement {
                     for (String s:membres)
                         System.out.println("\t\t\t- "+s);
                     break;
+                case "MSG":
+                    if(!(cnx.getAlias().equals(((Connexion) source).getAlias()))){
+
+                        System.out.println("\t\t\t." + evenement.getType() + " " + evenement.getArgument());
+                    }
+                    break;
+                case "HIST":
+                    arg = evenement.getArgument();
+                    historique = arg.split(":");
+                    for (String s:historique)
+                        System.out.println(s);
+                	break;
+                case "CHESSOK":// Iniatilise une partie d'echec
+                	client.InitialiseChessGame();
+                	System.out.print("\t\t\t." + evenement.getType() + " "+ evenement.getArgument() + "\n");
+                	System.out.println(client.ChessGameMap());
+                	break;
+                case "MOVE"://Mise a jour de la partie d'echec
+                	client.movePawn(evenement.getArgument());
+                	client.ChessGameMap();
+                	break;
                 default: //Afficher le texte recu :
                     System.out.println("\t\t\t."+evenement.getType()+" "+evenement.getArgument());
             }
